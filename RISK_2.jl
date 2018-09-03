@@ -9,11 +9,13 @@
 
 using Plots
 
-const DEF_WINS = 1
-const ATT_WINS = 0
+const DEF_WINS = 1 # for readability purposes only
+const ATT_WINS = 0 # 
 
-const defender_armies = 1
-const attacker_armies = 3
+const defender_armies = 2 # number of armies at start
+const attacker_armies = 2 # --/--/--
+
+const remove_armies_in_1st_round = 1 # comment for Prob. 2
 
 const Nmax = 10^8  # number of simulations
 
@@ -21,24 +23,26 @@ const Nmax = 10^8  # number of simulations
     def_armies = defender
     att_armies = attacker
 
+    adj = -remove_armies_in_1st_round
+
     while ((def_armies>=1) & (att_armies>1))
         ## attacker attacks:
         attacker_dice = maximum(rand(1:6,att_armies-1))
-        defender_dice = maximum(rand(1:6,def_armies))
+        defender_dice = maximum(rand(1:6,def_armies+adj))
         
         if defender_dice>=attacker_dice
             att_armies-=1
         else
             def_armies-=1
         end
-
+        adj = 0
     end
 
     if (att_armies==1)
         # defender have won
-        return 1
+        return DEF_WINS
     else
-        return 0
+        return ATT_WINS
     end
 end
 
@@ -73,3 +77,4 @@ asympt = repeat([prob_count[end]]; outer=length(y))
 plot(x,[y asympt], title="Share of positive outcomes vs log No. of simulations", label=["Simulations" "Last value"])
 
 plot!(xlims=(0,log.(10,Nmax)),xticks=0:0.5:log.(10,Nmax))
+
