@@ -1,0 +1,68 @@
+include("./RISK_2.jl")
+Pkg.add("Plots")
+include("./RISK_2.jl")
+Ns = [10 100 1000 10000 100000]
+t=0
+t = [t 0]
+include("./RISK_2.jl")
+include("./RISK_2.jl")
+include("./RISK_2.jl")
+include("./RISK_2.jl")
+include("./RISK_2.jl")
+include("./RISK_2.jl")
+include("./RISK_2.jl")
+include("./RISK_2.jl")
+include("./RISK_2.jl")
+include("./RISK_2.jl")
+include("./RISK_2.jl")
+include("./RISK_2.jl")
+Ns = [0 10 100 1000 10000 100000]
+probs = [0.0 60.0 29.0 22.8 24.04 24.452]
+plot(Ns,probs)
+Ns'
+plot(Ns',probs')
+plot(Ns',probs')
+plot(log(Ns'),probs')
+log(Ns)
+log(Ns,10)
+log(10,Ns)
+include("./RISK_2.jl")
+include("./RISK_2.jl")
+log(10,[0.0 10.0 26.0 23.2 24.38 24.633])
+log(10,[0.0 10.0 26.0 23.2 24.38 24.633])''
+log(10,[0.0 10.0 26.0 23.2 24.38 24.633])'
+include("./RISK_2.jl")
+include("./RISK_2.jl")
+Ns=[1 10 100 1000 10000 100000]
+probs=[0.0 10.0 22.0 24.7 25.34 24.655]
+plot(x=log(10,Ns),y=probs')
+Ns
+plot(x=log(10,Ns)'',y=probs')
+plot(x=log(10,Ns)',y=probs')
+plot(x=(log(10,Ns))',y=probs')
+probs'
+plot(x=(log(10,Ns))',y=probs','hey')
+plot(x=(log(10,Ns))',y=probs',"Hey")
+plot(x=(log(10,Ns))',y=probs',title="Hey")
+t = log(10,Ns)'
+t
+p = probs'
+plot(t,p)
+include("./RISK_2.jl")
+include("./RISK_2.jl")
+rep(1,100)
+repeat(1,2)
+repeat(1,outer=[2])
+repeat(1,outer=2)
+repeat(1,inner=2)
+repeat(1;inner=2)
+repeat([1];inner=2)
+repeat([1];outer=2)
+x
+length(x)
+include("./RISK_2.jl")
+include("./RISK_2.jl")
+4^0.5
+10^0.5
+include("./RISK_2.jl")
+include("./RISK_2.jl")

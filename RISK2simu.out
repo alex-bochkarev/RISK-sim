@@ -1,0 +1,39 @@
+Simulation of N=10 runs (games)
+elapsed time: 0.045268615 seconds
+Simulation of N=31.622776601683796 runs (games)
+elapsed time: 0.036580347 seconds
+Simulation of N=100.00000000000001 runs (games)
+elapsed time: 0.000137894 seconds
+Simulation of N=316.227766016838 runs (games)
+elapsed time: 0.000165097 seconds
+Simulation of N=1000.0000000000003 runs (games)
+elapsed time: 0.000416292 seconds
+Simulation of N=3162.2776601683804 runs (games)
+elapsed time: 0.001269835 seconds
+Simulation of N=10000.000000000004 runs (games)
+elapsed time: 0.003479944 seconds
+Simulation of N=31622.776601683807 runs (games)
+elapsed time: 0.007686747 seconds
+Simulation of N=100000.00000000004 runs (games)
+elapsed time: 0.036238038 seconds
+Simulation of N=316227.7660168381 runs (games)
+elapsed time: 0.080799118 seconds
+Simulation of N=1.0000000000000006e6 runs (games)
+elapsed time: 0.258633635 seconds
+Simulation of N=3.1622776601683814e6 runs (games)
+elapsed time: 0.808565485 seconds
+Simulation of N=1.0000000000000007e7 runs (games)
+elapsed time: 2.535857739 seconds
+Simulation of N=3.1622776601683818e7 runs (games)
+elapsed time: 8.009248899 seconds
+Simulation of N=1.0000000000000009e8 runs (games)
+elapsed time: 25.311197602 seconds
+Simulation of N=3.1622776601683825e8 runs (games)
+elapsed time: 80.015456475 seconds
+Simulation of N=1.0000000000000011e9 runs (games)
+elapsed time: 253.368862394 seconds
+Simulation of N=3.162277660168383e9 runs (games)
+elapsed time: 815.535480985 seconds
+The most accurate defense-win probability estimate:24.576%
+[1.0 10.0 31.6228 100.0 316.228 1000.0 3162.28 10000.0 31622.8 100000.0 3.16228e5 1.0e6 3.16228e6 1.0e7 3.16228e7 1.0e8 3.16228e8 1.0e9 3.16228e9]
+[0.0 20.0 25.2982 19.0 25.9307 25.0 24.8871 24.41 24.4444 24.578 24.6417 24.5232 24.5797 24.5609 24.5646 24.577 24.5791 24.5754 24.5757]

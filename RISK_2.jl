@@ -15,9 +15,9 @@ const ATT_WINS = 0
 const defender_armies = 1
 const attacker_armies = 3
 
-const Nmax = 1000000  # number of simulations
+const Nmax = 10^8  # number of simulations
 
-function play_game(defender, attacker)
+@everywhere function play_game(defender, attacker)
     def_armies = defender
     att_armies = attacker
 
@@ -43,7 +43,7 @@ function play_game(defender, attacker)
 end
 
 
-prob_count = 0 # 
+prob_count = 0 # saved outcome shares
 Ns = 1
 N = 10
 
@@ -52,7 +52,6 @@ while N<=Nmax
     println("Simulation of N=",N," runs (games)")
     tic()
     defender_wins_count = @parallel (+) for i=1:N
-        # play a game
         play_game(defender_armies,attacker_armies)
     end
 
@@ -67,9 +66,10 @@ println("The most accurate defense-win probability estimate:",@sprintf("%0.3f",p
 println(Ns)
 println(prob_count)
 
-x = (log(10,Ns))'
+x = (log.(10,Ns))'
 y = prob_count'
 asympt = repeat([prob_count[end]]; outer=length(y))
 
 plot(x,[y asympt], title="Share of positive outcomes vs log No. of simulations", label=["Simulations" "Last value"])
 
+plot!(xlims=(0,log.(10,Nmax)),xticks=0:0.5:log.(10,Nmax))
